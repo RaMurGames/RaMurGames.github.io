@@ -17,6 +17,19 @@
     console.log(data);
   }
 
+  function showInfo(data) {
+
+        // data comes through as a simple array since simpleSheet is turned on
+
+        alert("Successfully processed " + data.length + " rows!")
+
+        document.getElementById("gametitle").innerHTML = "<strong>Game Title:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
+
+        console.log(data);
+
+      }
+  
+  
   window.addEventListener('DOMContentLoaded', init)
 </script>
 <p>Welcome to Ra Mur's PS4 Game Sharing</p>
