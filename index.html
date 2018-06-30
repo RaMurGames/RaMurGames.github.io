@@ -1,38 +1,30 @@
+<!DOCTYPE html>
 <html>
-<body>
-
-<h1>PS4 GAME SHARING</h1>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-<script type='text/javascript'>    
-  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1nsBheZaPn8U_OR_VEpuro8k7YhMxubOQvT3tEYCfSJk/pubhtml';
-
-  function init() {
-    Tabletop.init( { key: publicSpreadsheetUrl,
-                     callback: showInfo,
-                     simpleSheet: true } )
-  }
-
-  function showInfo(data, tabletop) {
-    alert('Successfully processed!')
-    console.log(data);
-  }
-
-  function showInfo(data) {
-
-        // data comes through as a simple array since simpleSheet is turned on
-
-        alert("Successfully processed " + data.length + " rows!")
-
-        document.getElementById("gametitle").innerHTML = "<strong>Game Title:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
-
-        console.log(data);
-
-      }
-  
-  document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
-  window.addEventListener('DOMContentLoaded', init)
-</script>
-<p>Welcome to Ra Mur's PS4 Game Sharing</p>
-
-</body>
+	<head>
+		<title>Ra Mur, Sharing Games</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Welcome to Ra Mur Console Game Sharing</h1>
+				<p>We believed in sharing your games <em>Sharing is Caring</em></p>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:hardcoregamermbb1@gmail.com">email</a></li>
+        		<li><a href="https://github.com/ramurgames">github.com/ramurgames</a></li>
+			</ul>
+		</footer>
+	</body>
 </html>
